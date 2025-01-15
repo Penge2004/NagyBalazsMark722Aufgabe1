@@ -96,6 +96,7 @@ public class Main {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
         Document doc = builder.parse(new File(filePath));
+
         List<Patient> patients = new ArrayList<>();
 
         NodeList logList = doc.getElementsByTagName("log");
