@@ -1,0 +1,242 @@
+<logs>
+    <log>
+        <Datum>2023-11-05</Datum>
+        <Diagnose>Lungenentzündung</Diagnose>
+        <Id>1</Id>
+        <Krankenhaus>Princeton-Plainsboro Teaching Hospital</Krankenhaus>
+        <Patient>John Doe</Patient>
+        <Symptom>Fieber</Symptom>
+    </log>
+    <log>
+        <Datum>2023-10-20</Datum>
+        <Diagnose>Migräne</Diagnose>
+        <Id>2</Id>
+        <Krankenhaus>Princeton-Plainsboro Teaching Hospital</Krankenhaus>
+        <Patient>Jane Smith</Patient>
+        <Symptom>Kopfschmerzen</Symptom>
+    </log>
+    <log>
+        <Datum>2023-12-01</Datum>
+        <Diagnose>Allergie</Diagnose>
+        <Id>3</Id>
+        <Krankenhaus>Princeton-Plainsboro Teaching Hospital</Krankenhaus>
+        <Patient>Emily Johnson</Patient>
+        <Symptom>Hautausschlag</Symptom>
+    </log>
+    <log>
+        <Datum>2023-11-15</Datum>
+        <Diagnose>Bronchitis</Diagnose>
+        <Id>4</Id>
+        <Krankenhaus>New York General Hospital</Krankenhaus>
+        <Patient>Michael Brown</Patient>
+        <Symptom>Husten</Symptom>
+    </log>
+    <log>
+        <Datum>2023-10-25</Datum>
+        <Diagnose>Anämie</Diagnose>
+        <Id>5</Id>
+        <Krankenhaus>New York General Hospital</Krankenhaus>
+        <Patient>Laura Davis</Patient>
+        <Symptom>Müdigkeit</Symptom>
+    </log>
+    <log>
+        <Datum>2023-12-10</Datum>
+        <Diagnose>Hypotonie</Diagnose>
+        <Id>6</Id>
+        <Krankenhaus>St. Mary’s Medical Center</Krankenhaus>
+        <Patient>Robert Wilson</Patient>
+        <Symptom>Schwindel</Symptom>
+    </log>
+    <log>
+        <Datum>2023-11-18</Datum>
+        <Diagnose>Gastritis</Diagnose>
+        <Id>7</Id>
+        <Krankenhaus>St. Mary’s Medical Center</Krankenhaus>
+        <Patient>Sarah Miller</Patient>
+        <Symptom>Bauchschmerzen</Symptom>
+    </log>
+    <log>
+        <Datum>2023-12-03</Datum>
+        <Diagnose>Arthritis</Diagnose>
+        <Id>8</Id>
+        <Krankenhaus>New York General Hospital</Krankenhaus>
+        <Patient>Thomas Moore</Patient>
+        <Symptom>Gelenkschmerzen</Symptom>
+    </log>
+    <log>
+        <Datum>2023-10-30</Datum>
+        <Diagnose>Glaukom</Diagnose>
+        <Id>9</Id>
+        <Krankenhaus>New York General Hospital</Krankenhaus>
+        <Patient>Anna Garcia</Patient>
+        <Symptom>Sehstörung</Symptom>
+    </log>
+    <log>
+        <Datum>2023-11-08</Datum>
+        <Diagnose>Virusinfektion</Diagnose>
+        <Id>10</Id>
+        <Krankenhaus>St. Mary’s Medical Center</Krankenhaus>
+        <Patient>Mark Robinson</Patient>
+        <Symptom>Fieber</Symptom>
+    </log>
+    <log>
+        <Datum>2023-12-12</Datum>
+        <Diagnose>Lumbago</Diagnose>
+        <Id>11</Id>
+        <Krankenhaus>St. Mary’s Medical Center</Krankenhaus>
+        <Patient>Linda Perez</Patient>
+        <Symptom>Schmerzen</Symptom>
+    </log>
+    <log>
+        <Datum>2023-11-22</Datum>
+        <Diagnose>Gastritis</Diagnose>
+        <Id>12</Id>
+        <Krankenhaus>St. Mary’s Medical Center</Krankenhaus>
+        <Patient>David Thompson</Patient>
+        <Symptom>Übelkeit</Symptom>
+    </log>
+    <log>
+        <Datum>2023-12-15</Datum>
+        <Diagnose>Bluthochdruck</Diagnose>
+        <Id>13</Id>
+        <Krankenhaus>New York General Hospital</Krankenhaus>
+        <Patient>Emma White</Patient>
+        <Symptom>Blutdruckschwankungen</Symptom>
+    </log>
+    <log>
+        <Datum>2023-11-09</Datum>
+        <Diagnose>Grippe</Diagnose>
+        <Id>14</Id>
+        <Krankenhaus>New York General Hospital</Krankenhaus>
+        <Patient>John Doe</Patient>
+        <Symptom>Fieber</Symptom>
+    </log>
+    <log>
+        <Datum>2023-10-28</Datum>
+        <Diagnose>Diabetes</Diagnose>
+        <Id>15</Id>
+        <Krankenhaus>St. Mary’s Medical Center</Krankenhaus>
+        <Patient>Mary Anderson</Patient>
+        <Symptom>Schwäche</Symptom>
+    </log>
+    <log>
+        <Datum>2023-12-05</Datum>
+        <Diagnose>Herzinsuffizienz</Diagnose>
+        <Id>16</Id>
+        <Krankenhaus>Princeton-Plainsboro Teaching Hospital</Krankenhaus>
+        <Patient>William Thomas</Patient>
+        <Symptom>Atemnot</Symptom>
+    </log>
+    <log>
+        <Datum>2023-11-13</Datum>
+        <Diagnose>Dermatitis</Diagnose>
+        <Id>17</Id>
+        <Krankenhaus>New York General Hospital</Krankenhaus>
+        <Patient>Patricia Martinez</Patient>
+        <Symptom>Hautausschlag</Symptom>
+    </log>
+    <log>
+        <Datum>2023-12-08</Datum>
+        <Diagnose>Menière-Krankheit</Diagnose>
+        <Id>18</Id>
+        <Krankenhaus>St. Mary’s Medical Center</Krankenhaus>
+        <Patient>Christopher Martin</Patient>
+        <Symptom>Schwindel</Symptom>
+    </log>
+    <log>
+        <Datum>2023-11-01</Datum>
+        <Diagnose>Makuladegeneration</Diagnose>
+        <Id>19</Id>
+        <Krankenhaus>Princeton-Plainsboro Teaching Hospital</Krankenhaus>
+        <Patient>Barbara Clark</Patient>
+        <Symptom>Sehstörung</Symptom>
+    </log>
+    <log>
+        <Datum>2023-12-20</Datum>
+        <Diagnose>Lungenkrebs</Diagnose>
+        <Id>20</Id>
+        <Krankenhaus>New York General Hospital</Krankenhaus>
+        <Patient>Matthew Rodriguez</Patient>
+        <Symptom>Husten</Symptom>
+    </log>
+    <log>
+        <Datum>2023-10-19</Datum>
+        <Diagnose>Migräne</Diagnose>
+        <Id>21</Id>
+        <Krankenhaus>New York General Hospital</Krankenhaus>
+        <Patient>Jennifer Lewis</Patient>
+        <Symptom>Kopfschmerzen</Symptom>
+    </log>
+    <log>
+        <Datum>2023-11-06</Datum>
+        <Diagnose>Anämie</Diagnose>
+        <Id>22</Id>
+        <Krankenhaus>St. Mary’s Medical Center</Krankenhaus>
+        <Patient>Charles Harris</Patient>
+        <Symptom>Schwäche</Symptom>
+    </log>
+    <log>
+        <Datum>2023-10-27</Datum>
+        <Diagnose>Reizmagen</Diagnose>
+        <Id>23</Id>
+        <Krankenhaus>Princeton-Plainsboro Teaching Hospital</Krankenhaus>
+        <Patient>Alice Walker</Patient>
+        <Symptom>Übelkeit</Symptom>
+    </log>
+    <log>
+        <Datum>2023-11-10</Datum>
+        <Diagnose>Meningitis</Diagnose>
+        <Id>24</Id>
+        <Krankenhaus>St. Mary’s Medical Center</Krankenhaus>
+        <Patient>Margaret Young</Patient>
+        <Symptom>Fieber</Symptom>
+    </log>
+    <log>
+        <Datum>2023-12-18</Datum>
+        <Diagnose>Asthma</Diagnose>
+        <Id>25</Id>
+        <Krankenhaus>New York General Hospital</Krankenhaus>
+        <Patient>Joshua King</Patient>
+        <Symptom>Atemnot</Symptom>
+    </log>
+    <log>
+        <Datum>2023-12-02</Datum>
+        <Diagnose>Appendizitis</Diagnose>
+        <Id>26</Id>
+        <Krankenhaus>Princeton-Plainsboro Teaching Hospital</Krankenhaus>
+        <Patient>Susan Wright</Patient>
+        <Symptom>Bauchschmerzen</Symptom>
+    </log>
+    <log>
+        <Datum>2023-10-31</Datum>
+        <Diagnose>Bluthochdruck</Diagnose>
+        <Id>27</Id>
+        <Krankenhaus>St. Mary’s Medical Center</Krankenhaus>
+        <Patient>Karen Scott</Patient>
+        <Symptom>Blutdruckschwankungen</Symptom>
+    </log>
+    <log>
+        <Datum>2023-11-25</Datum>
+        <Diagnose>COPD</Diagnose>
+        <Id>28</Id>
+        <Krankenhaus>New York General Hospital</Krankenhaus>
+        <Patient>Thomas Adams</Patient>
+        <Symptom>Husten</Symptom>
+    </log>
+    <log>
+        <Datum>2023-11-29</Datum>
+        <Diagnose>Neuropathie</Diagnose>
+        <Id>29</Id>
+        <Krankenhaus>Princeton-Plainsboro Teaching Hospital</Krankenhaus>
+        <Patient>Rebecca Hill</Patient>
+        <Symptom>Schwindel</Symptom>
+    </log>
+    <log>
+        <Datum>2023-12-22</Datum>
+        <Diagnose>Psoriasis</Diagnose>
+        <Id>30</Id>
+        <Krankenhaus>St. Mary’s Medical Center</Krankenhaus>
+        <Patient>Daniel Allen</Patient>
+        <Symptom>Hautausschlag</Symptom>
+    </log>
+</logs>

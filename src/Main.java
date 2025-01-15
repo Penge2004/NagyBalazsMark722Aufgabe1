@@ -1,4 +1,12 @@
+import org.w3c.dom.Document;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 import java.io.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,13 +21,15 @@ public class Main {
      * The main method that initializes the program by reading input from a file, processing the data,
      * and providing a framework for further user input.
      */
-    public static void main(String[] args) {
-        String fileName = "src/CHANGE_THIS";
+    public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException {
+        String filePath = "src/health.xml";
         String outputFileName = "src/CHANGE_THIS";
 
         // Read data from the input file and store it in a list
-        List<Integer> changeListNameAndType = readDataFromFile(fileName);
+        List<Patient> patients = readDataFromFile(filePath);
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
+
+            //
 
 
 
@@ -31,21 +41,43 @@ public class Main {
     /**
      * Reads data from the specified file and processes it line by line.
      *
-     * @param fileName the path to the input file from which data is to be read.
+     * @param filePath the path to the input file from which data is to be read.
      * @return a list of Domain items processed from the file.
      */
-    public static List<Integer> readDataFromFile(String fileName) {
-        List<Integer> changeList = new ArrayList<Integer>();
-        try(BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                String[] data = line.split("CHANGE THIS");
+//    public static List<Integer> readDataFromFile(String fileName) {
+//        List<Integer> changeList = new ArrayList<Integer>();
+//        try(BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
+//            String line;
+//            while ((line = reader.readLine()) != null) {
+//                String[] data = line.split("CHANGE THIS");
+//
+//            }
+//        }catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        return changeList;
+//    }
 
-            }
-        }catch (IOException e) {
-            e.printStackTrace();
+    public static List<Patient>readDataFromFile(String filePath) throws ParserConfigurationException, IOException, SAXException {
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder = factory.newDocumentBuilder();
+        Document doc = builder.parse(new File(filePath));
+        List<Patient> patients = new ArrayList<>();
+
+        NodeList logList = doc.getElementsByTagName("log");
+        for (int i = 0; i < logList.getLength(); i++) {
+            int id = Integer.parseInt(doc.getElementsByTagName("Id").item(i).getTextContent());
+            String name = doc.getElementsByTagName("Patient").item(i).getTextContent();
+            String symptoms = doc.getElementsByTagName("Symptom").item(i).getTextContent();
+            String diagnose = doc.getElementsByTagName("Diagnose").item(i).getTextContent();
+            String dateString = doc.getElementsByTagName("Datum").item(i).getTextContent();
+            String hospital = doc.getElementsByTagName("Krankenhaus").item(i).getTextContent();
+
+            LocalDate  date = LocalDate.parse(dateString);
+
+            patients.add(new Patient(id,name,symptoms,diagnose,date,hospital));
         }
-        return changeList;
+        return patients;
     }
 
     /**
