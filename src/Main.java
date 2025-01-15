@@ -47,10 +47,10 @@ public class Main {
                     fieber.add(patient);
             }
             fieber.sort(Comparator.comparing(Patient::getDatum));
-            System.out.println("All Fieber Patients: ");
+            System.out.println("\nAll Fieber Patients: ");
             for (Patient patient : fieber) {
                 System.out.println("Datum: " + patient.getDatum() + ":" +
-                        patient.getPatientName() + " Symptoms: " + patient.getSymptoms());
+                        patient.getPatientName() + " Diagnose: " + patient.getDiagnose());
             }
 
             //D
@@ -76,7 +76,7 @@ public class Main {
 //            }
 
             writeDataToFile(outputFileName,sortedCasesProHospital);
-            System.out.println("Results written to " + outputFileName);
+            System.out.println("\nResults written to " + outputFileName);
 
 
 
