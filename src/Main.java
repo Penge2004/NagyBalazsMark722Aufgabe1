@@ -7,10 +7,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.*;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.List;
+import java.util.*;
 
 /**
  * Main entry point of the program.
@@ -25,7 +22,7 @@ public class Main {
      */
     public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException {
         String filePath = "src/health.xml";
-        String outputFileName = "src/CHANGE_THIS";
+        String outputFileName = "src/fallanzahl.txt";
 
         // Read data from the input file and store it in a list
         List<Patient> patients = readDataFromFile(filePath);
@@ -58,6 +55,29 @@ public class Main {
 
             //D
 
+            HashMap<String,Integer> casesProHospital = new HashMap<>();
+            for (Patient patient : patients) {
+                String hospital = patient.getHospital();
+
+                if(casesProHospital.containsKey(hospital)) {
+                    casesProHospital.put(hospital, casesProHospital.get(hospital) + 1);
+                }
+                else{
+                    casesProHospital.put(hospital, 1);
+                }
+            }
+            List<Map.Entry<String,Integer>> sortedCasesProHospital = casesProHospital.entrySet()
+                    .stream()
+                    .sorted((e1, e2) -> e2.getValue().compareTo(e1.getValue()))
+                    .toList();
+
+//            for (Map.Entry<String,Integer> entry : sortedCasesProHospital) {
+//                System.out.println(entry.getKey() + " " + entry.getValue());
+//            }
+
+            writeDataToFile(outputFileName,sortedCasesProHospital);
+            System.out.println("Results written to " + outputFileName);
+
 
 
 
@@ -72,20 +92,6 @@ public class Main {
      * @param filePath the path to the input file from which data is to be read.
      * @return a list of Domain items processed from the file.
      */
-//    public static List<Integer> readDataFromFile(String fileName) {
-//        List<Integer> changeList = new ArrayList<Integer>();
-//        try(BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
-//            String line;
-//            while ((line = reader.readLine()) != null) {
-//                String[] data = line.split("CHANGE THIS");
-//
-//            }
-//        }catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        return changeList;
-//    }
-
     public static List<Patient>readDataFromFile(String filePath) throws ParserConfigurationException, IOException, SAXException {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
@@ -112,10 +118,14 @@ public class Main {
      * Writes data to the specified file.
      *
      * @param fileName the path to the output file where data will be written.
-     * @param changeList the list of Domain item that will be written to the file.
+     * @param results the list of Domain item that will be written to the file.
      */
-    public static void writeDataToFile(String fileName, List<Integer> changeList) {
+    public static void writeDataToFile(String fileName, List<Map.Entry<String, Integer>> results) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
+            for (Map.Entry<String, Integer> entry : results) {
+                writer.write(entry.getKey() + "$" + entry.getValue());
+                writer.newLine();
+            }
 
         }catch (IOException e) {
             e.printStackTrace();
