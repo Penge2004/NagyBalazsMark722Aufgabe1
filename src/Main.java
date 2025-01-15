@@ -8,6 +8,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 /**
@@ -29,7 +30,17 @@ public class Main {
         List<Patient> patients = readDataFromFile(filePath);
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
 
-            //
+            //B
+            System.out.print("Start letter:");
+            Character startLetter = Character.toUpperCase(reader.readLine().charAt(0));
+            HashSet<Patient> names = new HashSet<>();
+            System.out.println("Names starting with " + startLetter);
+            for (Patient patient : patients) {
+                if (patient.getPatientName().startsWith(String.valueOf(startLetter)) && !names.contains(patient)) {
+                    System.out.println(patient.getPatientName());
+                    names.add(patient);
+                }
+            }
 
 
 
