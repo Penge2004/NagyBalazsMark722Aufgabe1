@@ -52,7 +52,8 @@ public class Main {
             fieber.sort(Comparator.comparing(Patient::getDatum));
             System.out.println("All Fieber Patients: ");
             for (Patient patient : fieber) {
-                System.out.println(patient.getPatientName());
+                System.out.println("Datum: " + patient.getDatum() + ":" +
+                        patient.getPatientName() + " Symptoms: " + patient.getSymptoms());
             }
 
             //D
