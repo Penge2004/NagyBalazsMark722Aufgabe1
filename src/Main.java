@@ -8,6 +8,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 
@@ -41,6 +42,21 @@ public class Main {
                     names.add(patient);
                 }
             }
+
+            //C
+            List<Patient> fieber = new ArrayList<>();
+            for (Patient patient : patients) {
+                if (patient.getSymptoms().equals("Fieber"))
+                    fieber.add(patient);
+            }
+            fieber.sort(Comparator.comparing(Patient::getDatum));
+            System.out.println("All Fieber Patients: ");
+            for (Patient patient : fieber) {
+                System.out.println(patient.getPatientName());
+            }
+
+            //D
+
 
 
 
